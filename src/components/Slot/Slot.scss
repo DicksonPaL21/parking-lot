@@ -1,0 +1,56 @@
+.slot {
+  width: 6rem;
+  aspect-ratio: 9/12;
+  border-radius: 0.4rem;
+  // border: 4px solid rgb(200, 200, 200);
+  background: rgba(200, 200, 200, 0.5);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  .content {
+    text-align: center;
+
+    .type {
+      font-size: 0.8rem;
+      color: rgb(100, 100, 100);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4rem;
+    background: transparent;
+    border: 3px solid rgb(200, 200, 200);
+  }
+
+  &.occupied {
+    background: rgba(66, 184, 131, 0.5);
+    &::after {
+      border-color: rgb(66, 184, 131);
+    }
+  }
+
+  &.is-park,
+  &.is-unpark {
+    &::after {
+      border-style: dashed;
+    }
+  }
+
+  &.not-allowed {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

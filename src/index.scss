@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  max-width: 1080px;
+  margin: auto;
+  .entry {
+    display: flex;
+    padding: 50px 18px 20px 18px;
+    align-items: center;
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      margin: auto 0.4rem;
+      border-radius: 0.4rem;
+      background: #f3f3f3;
+      cursor: pointer;
+
+      &:hover {
+        background: #dfdfdf;
+      }
+
+      &.disabled {
+        background: #c9c9c9;
+        cursor: not-allowed;
+      }
+    }
+
+    .vehicle-group {
+      * {
+        padding: 12px 18px;
+      }
+
+      span {
+        padding-right: 6px;
+      }
+
+      select {
+        margin: auto 0.4rem;
+        border-radius: 0.4rem;
+      }
+    }
+  }
+
+  .parking-slot {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .details {
+    padding: 50px 26px;
+  }
+}
