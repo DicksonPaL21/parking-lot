@@ -32,11 +32,11 @@ function App({ appData, actions, ...props }) {
     };
 
     if (isPark && !occupied) {
-      actions.park(id, vSize);
+      actions.park(id, vSize, onSuccess);
     }
 
     if (isUnPark && occupied) {
-      actions.unpark(id);
+      actions.unpark(id, onSuccess);
     }
   };
 
